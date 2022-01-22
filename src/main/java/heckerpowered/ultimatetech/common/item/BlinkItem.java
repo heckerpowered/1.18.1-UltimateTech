@@ -1,7 +1,7 @@
 package heckerpowered.ultimatetech.common.item;
 
 import heckerpowered.ultimatetech.common.capabilities.Capabilities;
-import heckerpowered.ultimatetech.common.util.UltimateTechUtil;
+import heckerpowered.ultimatetech.common.registries.UltimateTechItem;
 import heckerpowered.ultimatetech.common.util.concurrent.ScheduledUtil;
 import heckerpowered.ultimatetech.common.util.concurrent.cancellation.ConditionCancellation;
 import net.minecraft.core.BlockPos;
@@ -14,7 +14,7 @@ import net.minecraft.world.phys.Vec3;
 
 public final class BlinkItem extends EnergizedItem {
     public BlinkItem() {
-        super(UltimateTechUtil.newProperties().stacksTo(1), 480000);
+        super(UltimateTechItem.newProperties().stacksTo(1), 480000);
     }
 
     @Override
