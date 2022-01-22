@@ -1,12 +1,13 @@
 package heckerpowered.ultimatetech.common.registries;
 
 import heckerpowered.ultimatetech.UltimateTech;
-import heckerpowered.ultimatetech.common.UltimateTechGroup;
 import heckerpowered.ultimatetech.common.item.BlinkItem;
 import heckerpowered.ultimatetech.common.item.ElectricBowItem;
+import heckerpowered.ultimatetech.common.item.tier.UltimateTechTier;
+import heckerpowered.ultimatetech.common.util.UltimateTechUtil;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Item.Properties;
+import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -21,5 +22,7 @@ public final class UltimateTechItem {
         public static final RegistryObject<BlockItem> ITEM_ENERGY_MATRIX_BLOCK = DEFERRED_REGISTER.register(
                         "energy_matrix_block",
                         () -> new BlockItem(UltimateTechBlock.ENERGY_MATRIX_BLOCK.get(),
-                                        new Properties().tab(UltimateTechGroup.getInstance())));
+                                        UltimateTechUtil.newProperties()));
+        public static final RegistryObject<SwordItem> ITEM_COAL_SWORD = DEFERRED_REGISTER.register("coal_sword",
+                        () -> new SwordItem(UltimateTechTier.COAL, 3, -2.4F, UltimateTechUtil.newProperties()));
 }

@@ -1,19 +1,13 @@
 package heckerpowered.ultimatetech.common.util;
 
-import net.minecraft.world.entity.Entity;
+import heckerpowered.ultimatetech.common.UltimateTechGroup;
+import net.minecraft.world.item.Item.Properties;
 
 public final class UltimateTechUtil {
     private UltimateTechUtil() {
     }
 
-    public static final boolean isInvulnerable(Entity entity) {
-        return entity.getPersistentData().getInt("UltimateTechInvulnerableCount") > 0;
-    }
-
-    public static final void setInvulnerable(Entity entity, boolean invulnerable) {
-        var persistentData = entity.getPersistentData();
-        var invulnerableCount = persistentData.getInt("UltimateTechInvulnerableCount");
-        persistentData.putInt("UltimateTechInvulnerableCount",
-                invulnerable ? ++invulnerableCount : --invulnerableCount);
+    public static Properties newProperties() {
+        return new Properties().tab(UltimateTechGroup.getInstance());
     }
 }

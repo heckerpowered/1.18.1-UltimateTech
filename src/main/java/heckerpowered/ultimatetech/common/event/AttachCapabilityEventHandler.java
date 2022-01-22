@@ -1,6 +1,7 @@
 package heckerpowered.ultimatetech.common.event;
 
 import heckerpowered.ultimatetech.UltimateTech;
+import heckerpowered.ultimatetech.common.capabilities.invulnerable.InvulnerableHandler;
 import heckerpowered.ultimatetech.common.capabilities.phase.PhaseHandler;
 import net.minecraft.world.entity.Entity;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
@@ -13,5 +14,6 @@ public final class AttachCapabilityEventHandler {
     @SubscribeEvent
     public static final void onAttachCapability(final AttachCapabilitiesEvent<Entity> event) {
         event.addCapability(UltimateTech.rl("phase"), new PhaseHandler());
+        event.addCapability(UltimateTech.rl("invulnerable"), new InvulnerableHandler());
     }
 }
