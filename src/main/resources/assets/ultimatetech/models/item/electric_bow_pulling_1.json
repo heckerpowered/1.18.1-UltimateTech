@@ -1,0 +1,7 @@
+{
+    "parent": "item/bow",
+    "textures": {
+        "layer0": "ultimatetech:item/electric_bow_pulling_1"
+    },
+    "overrides": []
+}

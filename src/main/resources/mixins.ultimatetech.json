@@ -1,0 +1,12 @@
+{
+    "required": true,
+    "package": "heckerpowered.ultimatetech.common.mixins",
+    "mixins": [
+        "PlayerMixin"
+    ],
+    "client": [],
+    "server": [],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

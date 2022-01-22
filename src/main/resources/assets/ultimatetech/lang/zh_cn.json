@@ -1,0 +1,9 @@
+{
+    "itemGroup.ultimate_tech": "终极科技",
+    "item.ultimatetech.blink": "量子推进器",
+    "item.desc.energy": "已储能: ",
+    "item.desc.fraction": "%s/%s",
+    "container.charge": "充能",
+    "block.ultimatetech.energy_matrix_block": "能量矩阵",
+    "item.ultimatetech.electric_bow": "电动弓"
+}

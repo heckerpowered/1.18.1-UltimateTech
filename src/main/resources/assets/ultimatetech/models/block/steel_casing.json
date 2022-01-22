@@ -1,0 +1,6 @@
+{
+    "parent": "ultimatetech:block/basic_cube",
+    "textures": {
+        "all": "ultimatetech:block/steel_casing"
+    }
+}

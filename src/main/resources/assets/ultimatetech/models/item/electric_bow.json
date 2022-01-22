@@ -1,0 +1,28 @@
+{
+    "parent": "item/bow",
+    "textures": {
+        "layer0": "ultimatetech:item/electric_bow"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "ultimatetech:pulling": 1
+            },
+            "model": "ultimatetech:item/electric_bow_pulling_0"
+        },
+        {
+            "predicate": {
+                "ultimatetech:pulling": 1,
+                "ultimatetech:pull": 0.65
+            },
+            "model": "ultimatetech:item/electric_bow_pulling_1"
+        },
+        {
+            "predicate": {
+                "ultimatetech:pulling": 1,
+                "ultimatetech:pull": 0.9
+            },
+            "model": "ultimatetech:item/electric_bow_pulling_2"
+        }
+    ]
+}
