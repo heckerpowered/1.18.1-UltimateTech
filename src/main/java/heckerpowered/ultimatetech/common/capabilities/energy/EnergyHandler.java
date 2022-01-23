@@ -6,6 +6,11 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
 
+/**
+ * <strong>WARNIG:</strong> Do not use ICapabilitySerializable<?> on ItemStack
+ * <p>
+ * YOU WILL REGRET IT!
+ */
 public class EnergyHandler implements IEnergy, ICapabilityProvider {
     private final LazyOptional<IEnergy> holder = LazyOptional.of(() -> this);
     private ItemStack stack;
