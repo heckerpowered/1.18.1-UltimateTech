@@ -11,6 +11,7 @@ public class EnergyHandler implements IEnergy, ICapabilitySerializable<CompoundT
     private final LazyOptional<IEnergy> holder = LazyOptional.of(() -> this);
     private double energy;
     private double maxEnergy;
+    private boolean dirty;
 
     public EnergyHandler() {
         super();
@@ -32,11 +33,15 @@ public class EnergyHandler implements IEnergy, ICapabilitySerializable<CompoundT
         if (this.energy > maxEnergy) {
             this.energy = maxEnergy;
         }
+
+        dirty = true;
     }
 
     @Override
     public void setMaxEnergy(double energy) {
         this.maxEnergy = energy;
+
+        dirty = true;
     }
 
     @Override
@@ -57,4 +62,15 @@ public class EnergyHandler implements IEnergy, ICapabilitySerializable<CompoundT
         setEnergy(nbt.getDouble("Energy"));
         setMaxEnergy(nbt.getDouble("MaxEnergy"));
     }
+
+    @Override
+    public boolean isDirty() {
+        if (dirty) {
+            dirty = false;
+            return true;
+        }
+
+        return false;
+    }
+
 }
