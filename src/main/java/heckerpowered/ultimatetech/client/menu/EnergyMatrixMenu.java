@@ -65,5 +65,7 @@ public final class EnergyMatrixMenu extends ItemCombinerMenu {
         } else {
             resultSlots.setItem(0, ItemStack.EMPTY);
         }
+
+        broadcastChanges();
     }
 }

@@ -11,6 +11,8 @@ public interface IEnergy {
 
     public boolean isDirty();
 
+    public void markDirty();
+
     default public double getNeeded() {
         return getMaxEnergy() - getEnergy();
     }

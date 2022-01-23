@@ -33,15 +33,11 @@ public class EnergyHandler implements IEnergy, ICapabilitySerializable<CompoundT
         if (this.energy > maxEnergy) {
             this.energy = maxEnergy;
         }
-
-        dirty = true;
     }
 
     @Override
     public void setMaxEnergy(double energy) {
         this.maxEnergy = energy;
-
-        dirty = true;
     }
 
     @Override
@@ -71,6 +67,11 @@ public class EnergyHandler implements IEnergy, ICapabilitySerializable<CompoundT
         }
 
         return false;
+    }
+
+    @Override
+    public void markDirty() {
+        dirty = true;
     }
 
 }
