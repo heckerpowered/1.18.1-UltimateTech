@@ -5,5 +5,13 @@
     "container.charge": "Charge",
     "block.ultimatetech.energy_matrix_block": "Energy Matrix",
     "item.ultimatetech.electric_bow": "Electric Bow",
-    "item.ultimatetech.coal_sword": "Coal Sword"
+    "item.ultimatetech.coal_sword": "Coal Sword",
+    "item.ultimatetech.coal_pickaxe": "Coal Pickaxe",
+    "item.ultimatetech.coal_axe": "Coal Axe",
+    "item.ultimatetech.coal_shovel": "Coal Shovel",
+    "item.ultimatetech.coal_hoe": "Coal Hoe",
+    "item.ultimatetech.coal_helmet": "Coal Helmet",
+    "item.ultimatetech.coal_chestplate": "Coal Chestplate",
+    "item.ultimatetech.coal_leggings": "Coal Leggings",
+    "item.ultimatetech.coal_boots": "Coal Boots"
 }

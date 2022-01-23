@@ -42,4 +42,9 @@ public class InvulnerableHandler implements IInvulnerable, ICapabilitySerializab
         return invulnerable > 0;
     }
 
+    @Override
+    public void clearInvulnerable() {
+        invulnerable = 0;
+    }
+
 }

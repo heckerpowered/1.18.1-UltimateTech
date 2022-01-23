@@ -4,7 +4,11 @@ import heckerpowered.ultimatetech.UltimateTech;
 import heckerpowered.ultimatetech.common.UltimateTechGroup;
 import heckerpowered.ultimatetech.common.item.BlinkItem;
 import heckerpowered.ultimatetech.common.item.ElectricBowItem;
+import heckerpowered.ultimatetech.common.item.armor.CoalArmorItem;
+import heckerpowered.ultimatetech.common.item.tier.UltimateTechArmorMaterials;
 import heckerpowered.ultimatetech.common.item.tier.UltimateTechTier;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.HoeItem;
@@ -31,6 +35,7 @@ public final class UltimateTechItem {
                                         newProperties()));
         // #endregion
 
+        // #region Coal Items
         public static final RegistryObject<SwordItem> ITEM_COAL_SWORD = DEFERRED_REGISTER.register("coal_sword",
                         () -> new SwordItem(UltimateTechTier.COAL, 3, -2.4F, newProperties()));
         public static final RegistryObject<PickaxeItem> ITEM_COAL_PICKAXE = DEFERRED_REGISTER.register("coal_pickaxe",
@@ -41,6 +46,21 @@ public final class UltimateTechItem {
                         () -> new ShovelItem(UltimateTechTier.COAL, 1.5F, -3.0F, newProperties()));
         public static final RegistryObject<HoeItem> ITEM_COAL_HOE = DEFERRED_REGISTER.register("coal_hoe",
                         () -> new HoeItem(UltimateTechTier.COAL, -1, -1.5F, newProperties()));
+        public static final RegistryObject<ArmorItem> ITEM_COAL_HELMET = DEFERRED_REGISTER.register("coal_helmet",
+                        () -> new CoalArmorItem(UltimateTechArmorMaterials.COAL, EquipmentSlot.HEAD, newProperties()));
+        public static final RegistryObject<ArmorItem> ITEM_COAL_CHESTPLATE = DEFERRED_REGISTER.register(
+                        "coal_chestplate",
+                        () -> new CoalArmorItem(UltimateTechArmorMaterials.COAL, EquipmentSlot.CHEST,
+                                        newProperties()));
+        public static final RegistryObject<ArmorItem> ITEM_COAL_LEGGINGS = DEFERRED_REGISTER.register(
+                        "coal_leggings",
+                        () -> new CoalArmorItem(UltimateTechArmorMaterials.COAL, EquipmentSlot.LEGS,
+                                        newProperties()));
+        public static final RegistryObject<ArmorItem> ITEM_COAL_BOOTS = DEFERRED_REGISTER.register(
+                        "coal_boots",
+                        () -> new CoalArmorItem(UltimateTechArmorMaterials.COAL, EquipmentSlot.FEET,
+                                        newProperties()));
+        // #endregion
 
         public static Properties newProperties() {
                 return new Properties().tab(UltimateTechGroup.getInstance());

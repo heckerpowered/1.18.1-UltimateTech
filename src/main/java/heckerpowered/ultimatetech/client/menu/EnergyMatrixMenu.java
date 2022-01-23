@@ -19,7 +19,7 @@ public final class EnergyMatrixMenu extends ItemCombinerMenu {
     }
 
     public EnergyMatrixMenu(int containerId, Inventory inventory, ContainerLevelAccess access) {
-        super(UltimateTechMenu.ENERGY_MATRIX_MENU_TYPE.get(), containerId, inventory, ContainerLevelAccess.NULL);
+        super(UltimateTechMenu.ENERGY_MATRIX_MENU_TYPE.get(), containerId, inventory, access);
     }
 
     @Override
@@ -65,8 +65,5 @@ public final class EnergyMatrixMenu extends ItemCombinerMenu {
         } else {
             resultSlots.setItem(0, ItemStack.EMPTY);
         }
-
-        broadcastChanges();
     }
-
 }

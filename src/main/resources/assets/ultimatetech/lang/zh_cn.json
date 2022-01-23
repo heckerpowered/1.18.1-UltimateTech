@@ -6,5 +6,13 @@
     "container.charge": "充能",
     "block.ultimatetech.energy_matrix_block": "能量矩阵",
     "item.ultimatetech.electric_bow": "电动弓",
-    "item.ultimatetech.coal_sword": "煤炭剑"
+    "item.ultimatetech.coal_sword": "煤炭剑",
+    "item.ultimatetech.coal_pickaxe": "煤炭镐",
+    "item.ultimatetech.coal_axe": "煤炭斧",
+    "item.ultimatetech.coal_shovel": "煤炭锹",
+    "item.ultimatetech.coal_hoe": "煤炭锄",
+    "item.ultimatetech.coal_helmet": "煤炭头盔",
+    "item.ultimatetech.coal_chestplate": "煤炭胸甲",
+    "item.ultimatetech.coal_leggings": "煤炭护腿",
+    "item.ultimatetech.coal_boots": "煤炭靴子"
 }

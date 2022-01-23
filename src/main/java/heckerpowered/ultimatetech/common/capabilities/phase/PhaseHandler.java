@@ -42,4 +42,8 @@ public class PhaseHandler implements IPhase, ICapabilitySerializable<CompoundTag
         phase = nbt.getInt("Phase");
     }
 
+    @Override
+    public void clearPhase() {
+        phase = 0;
+    }
 }

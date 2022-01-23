@@ -9,6 +9,7 @@ import heckerpowered.ultimatetech.common.capabilities.Capabilities;
 import heckerpowered.ultimatetech.common.event.AttachCapabilityEventHandler;
 import heckerpowered.ultimatetech.common.event.CommonEventHandler;
 import heckerpowered.ultimatetech.common.event.CommonTickEventHandler;
+import heckerpowered.ultimatetech.common.network.UltimateTechPacketHandler;
 import heckerpowered.ultimatetech.common.registries.UltimateTechBlock;
 import heckerpowered.ultimatetech.common.registries.UltimateTechBlockEntity;
 import heckerpowered.ultimatetech.common.registries.UltimateTechEntity;
@@ -34,6 +35,8 @@ public final class UltimateTech {
 
     public static final String MODID = "ultimatetech";
 
+    public static final String ARMOR_PATH = MODID + ":textures/models/armor/";
+
     public UltimateTech() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::registerCapabilities);
@@ -44,6 +47,7 @@ public final class UltimateTech {
         UltimateTechBlockEntity.DEFERRED_REGISTER.register(modEventBus);
         UltimateTechMenu.DEFERRED_REGISTER.register(modEventBus);
         UltimateTechEntity.DEFERRED_REGISTER.register(modEventBus);
+        UltimateTechPacketHandler.initialize();
         MinecraftForge.EVENT_BUS.register(CommonTickEventHandler.class);
         MinecraftForge.EVENT_BUS.register(CommonEventHandler.class);
         MinecraftForge.EVENT_BUS.register(AttachCapabilityEventHandler.class);

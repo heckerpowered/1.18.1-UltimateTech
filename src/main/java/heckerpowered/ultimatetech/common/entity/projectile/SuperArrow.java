@@ -39,8 +39,14 @@ public class SuperArrow extends AbstractArrow {
         var forward = getForward().scale(10);
         for (var e : level.getEntities(getOwner(), getBoundingBox().contract(forward.x, forward.y, forward.z))) {
             e.invulnerableTime = 0;
-            e.hurt(DamageSource.thrown(this, getOwner()), (float) getBaseDamage());
+            var owner = getOwner();
+            DamageSource damageSource = DamageSource.GENERIC;
+            if (owner != null && owner instanceof LivingEntity) {
+                damageSource = DamageSource.mobAttack((LivingEntity) owner);
+            }
+            e.hurt(damageSource, (float) getBaseDamage());
         }
+
         setPos(position.add(forward));
     }
 

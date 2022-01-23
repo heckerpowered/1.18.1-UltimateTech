@@ -1,5 +1,6 @@
 package heckerpowered.ultimatetech.common.block.entity;
 
+import heckerpowered.ultimatetech.client.menu.EnergyMatrixMenu;
 import heckerpowered.ultimatetech.common.registries.UltimateTechBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
@@ -72,7 +73,7 @@ public class EnergyMatrixBlockEntity extends BaseContainerBlockEntity {
 
     @Override
     protected AbstractContainerMenu createMenu(int p_58627_, Inventory p_58628_) {
-        return null;
+        return new EnergyMatrixMenu(p_58627_, p_58628_);
     }
 
 }
