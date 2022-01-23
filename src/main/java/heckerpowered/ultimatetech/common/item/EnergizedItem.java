@@ -54,7 +54,7 @@ public class EnergizedItem extends Item {
 
     @Override
     public ICapabilityProvider initCapabilities(ItemStack stack, CompoundTag nbt) {
-        var capability = new EnergyHandler();
+        var capability = new EnergyHandler(stack);
         capability.setMaxEnergy(maxEnergy);
         return capability;
     }

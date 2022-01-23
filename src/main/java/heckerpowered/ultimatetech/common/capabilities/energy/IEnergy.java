@@ -9,10 +9,6 @@ public interface IEnergy {
 
     public void setMaxEnergy(double energy);
 
-    public boolean isDirty();
-
-    public void markDirty();
-
     default public double getNeeded() {
         return getMaxEnergy() - getEnergy();
     }

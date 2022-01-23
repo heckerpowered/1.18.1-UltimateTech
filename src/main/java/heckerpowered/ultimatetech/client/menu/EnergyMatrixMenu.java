@@ -59,13 +59,12 @@ public final class EnergyMatrixMenu extends ItemCombinerMenu {
                 if (count > maxCount) {
                     count = maxCount;
                 }
+
                 energy.increaseEnergy(charge * count);
                 resultSlots.setItem(0, result);
             });
         } else {
             resultSlots.setItem(0, ItemStack.EMPTY);
         }
-
-        broadcastChanges();
     }
 }

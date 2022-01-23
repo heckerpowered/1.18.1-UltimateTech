@@ -1,77 +1,41 @@
 package heckerpowered.ultimatetech.common.capabilities.energy;
 
-import heckerpowered.ultimatetech.common.capabilities.Capabilities;
 import net.minecraft.core.Direction;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ICapabilitySerializable;
+import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
 
-public class EnergyHandler implements IEnergy, ICapabilitySerializable<CompoundTag> {
+public class EnergyHandler implements IEnergy, ICapabilityProvider {
     private final LazyOptional<IEnergy> holder = LazyOptional.of(() -> this);
-    private double energy;
-    private double maxEnergy;
-    private boolean dirty;
+    private ItemStack stack;
 
-    public EnergyHandler() {
-        super();
+    public EnergyHandler(ItemStack stack) {
+        this.stack = stack;
     }
 
     @Override
     public double getEnergy() {
-        return energy;
+        return stack.getOrCreateTag().getDouble("UltimateTechEnergy");
     }
 
     @Override
     public double getMaxEnergy() {
-        return maxEnergy;
+        return stack.getOrCreateTag().getDouble("UltimateTechMaxEnergy");
     }
 
     @Override
     public void setEnergy(double energy) {
-        this.energy = energy;
-        if (this.energy > maxEnergy) {
-            this.energy = maxEnergy;
-        }
+        stack.getOrCreateTag().putDouble("UltimateTechEnergy", energy);
     }
 
     @Override
     public void setMaxEnergy(double energy) {
-        this.maxEnergy = energy;
+        stack.getOrCreateTag().putDouble("UltimateTechMaxEnergy", energy);
     }
 
     @Override
     public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction side) {
-        return Capabilities.ITEM_ENERGY_CAPABILITY.orEmpty(cap, holder);
+        return holder.cast();
     }
-
-    @Override
-    public CompoundTag serializeNBT() {
-        var tag = new CompoundTag();
-        tag.putDouble("Energy", getEnergy());
-        tag.putDouble("MaxEnergy", getMaxEnergy());
-        return tag;
-    }
-
-    @Override
-    public void deserializeNBT(CompoundTag nbt) {
-        setEnergy(nbt.getDouble("Energy"));
-        setMaxEnergy(nbt.getDouble("MaxEnergy"));
-    }
-
-    @Override
-    public boolean isDirty() {
-        if (dirty) {
-            dirty = false;
-            return true;
-        }
-
-        return false;
-    }
-
-    @Override
-    public void markDirty() {
-        dirty = true;
-    }
-
 }
