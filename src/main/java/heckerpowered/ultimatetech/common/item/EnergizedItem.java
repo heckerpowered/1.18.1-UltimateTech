@@ -12,7 +12,6 @@ import heckerpowered.ultimatetech.common.util.math.ElectricUnit;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -83,20 +82,5 @@ public class EnergizedItem extends Item {
     @Override
     public int getBarColor(ItemStack p_150901_) {
         return 3997338;
-    }
-
-    @Override
-    public void inventoryTick(ItemStack p_41404_, Level p_41405_, Entity p_41406_, int p_41407_, boolean p_41408_) {
-        if (p_41406_ instanceof ServerPlayer) {
-            var player = (ServerPlayer) p_41406_;
-            p_41404_.getCapability(Capabilities.ITEM_ENERGY_CAPABILITY).ifPresent(e -> {
-                if (e.isDirty()) {
-                    UltimateTechPacketHandler.sendTo(new UpdateEnergyPacket(
-                            player.getId(), p_41407_, e.getEnergy(), e.getMaxEnergy()), player);
-                }
-            });
-        }
-
-        super.inventoryTick(p_41404_, p_41405_, p_41406_, p_41407_, p_41408_);
     }
 }

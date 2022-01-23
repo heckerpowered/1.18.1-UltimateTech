@@ -9,6 +9,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.AABB;
 
 public class SuperArrow extends AbstractArrow {
     public SuperArrow(EntityType<? extends AbstractArrow> p_36717_, Level p_36719_) {
@@ -37,17 +38,18 @@ public class SuperArrow extends AbstractArrow {
         }
         var position = position();
         var forward = getForward().scale(10);
-        for (var e : level.getEntities(getOwner(), getBoundingBox().contract(forward.x, forward.y, forward.z))) {
+        setPos(position.add(forward));
+        for (var e : level.getEntities(getOwner(), new AABB(position, position()))) {
             e.invulnerableTime = 0;
             var owner = getOwner();
             DamageSource damageSource = DamageSource.GENERIC;
             if (owner != null && owner instanceof LivingEntity) {
                 damageSource = DamageSource.mobAttack((LivingEntity) owner);
             }
+
             e.hurt(damageSource, (float) getBaseDamage());
         }
 
-        setPos(position.add(forward));
     }
 
     @Override
