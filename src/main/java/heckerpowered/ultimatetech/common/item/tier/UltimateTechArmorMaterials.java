@@ -12,7 +12,9 @@ public enum UltimateTechArmorMaterials implements ArmorMaterial {
     COAL("coal", 9, new int[] { 1, 3, 4, 2 }, 10, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
             () -> Ingredient.of(Items.COAL)),
     REDSTONE("redstone", 13, new int[] { 1, 4, 5, 2 }, 12, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-            () -> Ingredient.of(Items.REDSTONE));
+            () -> Ingredient.of(Items.REDSTONE)),
+    EMERALD("emerald", 40, new int[] { 4, 7, 9, 4 }, 20, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.2F,
+            () -> Ingredient.of(Items.EMERALD));
 
     private static final int[] HEALTH_PER_SLOT = new int[] { 13, 15, 16, 11 };
     private final String name;

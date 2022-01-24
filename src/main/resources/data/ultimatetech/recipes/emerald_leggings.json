@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "pattern": [
+        "CCC",
+        "C C",
+        "C C"
+    ],
+    "key": {
+        "C": {
+            "item": "minecraft:emerald"
+        }
+    },
+    "result": {
+        "item": "ultimatetech:emerald_leggings"
+    }
+}

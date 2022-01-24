@@ -5,6 +5,7 @@ import heckerpowered.ultimatetech.common.UltimateTechGroup;
 import heckerpowered.ultimatetech.common.item.BlinkItem;
 import heckerpowered.ultimatetech.common.item.ElectricBowItem;
 import heckerpowered.ultimatetech.common.item.armor.CoalArmorItem;
+import heckerpowered.ultimatetech.common.item.armor.EmeraldArmorItem;
 import heckerpowered.ultimatetech.common.item.armor.RedStoneArmorItem;
 import heckerpowered.ultimatetech.common.item.tier.UltimateTechArmorMaterials;
 import heckerpowered.ultimatetech.common.item.tier.UltimateTechTier;
@@ -91,6 +92,38 @@ public final class UltimateTechItem {
         public static final RegistryObject<ArmorItem> ITEM_REDSTONE_BOOTS = DEFERRED_REGISTER.register(
                         "redstone_boots",
                         () -> new RedStoneArmorItem(UltimateTechArmorMaterials.REDSTONE, EquipmentSlot.FEET,
+                                        newProperties()));
+
+        // #endregion
+
+        // #region Emerald Items
+        public static final RegistryObject<SwordItem> ITEM_EMERALD_SWORD = DEFERRED_REGISTER.register("emerald_sword",
+                        () -> new SwordItem(UltimateTechTier.EMERALD, 4, -2.4F, newProperties()));
+        public static final RegistryObject<PickaxeItem> ITEM_EMERALD_PICKAXE = DEFERRED_REGISTER.register(
+                        "emerald_pickaxe",
+                        () -> new PickaxeItem(UltimateTechTier.EMERALD, 1, -2.8F, newProperties()));
+        public static final RegistryObject<AxeItem> ITEM_EMERALD_AXE = DEFERRED_REGISTER.register("emerald_axe",
+                        () -> new AxeItem(UltimateTechTier.EMERALD, 5.0F, -3.0F, newProperties()));
+        public static final RegistryObject<ShovelItem> ITEM_EMERALD_SHOVEL = DEFERRED_REGISTER.register(
+                        "emerald_shovel",
+                        () -> new ShovelItem(UltimateTechTier.EMERALD, 1.5F, -3.0F, newProperties()));
+        public static final RegistryObject<HoeItem> ITEM_EMERALD_HOE = DEFERRED_REGISTER.register("emerald_hoe",
+                        () -> new HoeItem(UltimateTechTier.EMERALD, -1, -1.5F, newProperties()));
+        public static final RegistryObject<ArmorItem> ITEM_EMERALD_HELMET = DEFERRED_REGISTER.register(
+                        "emerald_helmet",
+                        () -> new EmeraldArmorItem(UltimateTechArmorMaterials.EMERALD, EquipmentSlot.HEAD,
+                                        newProperties()));
+        public static final RegistryObject<ArmorItem> ITEM_EMERALD_CHESTPLATE = DEFERRED_REGISTER.register(
+                        "emerald_chestplate",
+                        () -> new EmeraldArmorItem(UltimateTechArmorMaterials.EMERALD, EquipmentSlot.CHEST,
+                                        newProperties()));
+        public static final RegistryObject<ArmorItem> ITEM_EMERALD_LEGGINGS = DEFERRED_REGISTER.register(
+                        "emerald_leggings",
+                        () -> new EmeraldArmorItem(UltimateTechArmorMaterials.EMERALD, EquipmentSlot.LEGS,
+                                        newProperties()));
+        public static final RegistryObject<ArmorItem> ITEM_EMERALD_BOOTS = DEFERRED_REGISTER.register(
+                        "emerald_boots",
+                        () -> new EmeraldArmorItem(UltimateTechArmorMaterials.EMERALD, EquipmentSlot.FEET,
                                         newProperties()));
 
         // #endregion
