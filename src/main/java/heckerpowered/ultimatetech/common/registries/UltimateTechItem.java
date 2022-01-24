@@ -5,6 +5,7 @@ import heckerpowered.ultimatetech.common.UltimateTechGroup;
 import heckerpowered.ultimatetech.common.item.BlinkItem;
 import heckerpowered.ultimatetech.common.item.ElectricBowItem;
 import heckerpowered.ultimatetech.common.item.armor.CoalArmorItem;
+import heckerpowered.ultimatetech.common.item.armor.CopperArmorItem;
 import heckerpowered.ultimatetech.common.item.armor.EmeraldArmorItem;
 import heckerpowered.ultimatetech.common.item.armor.RedStoneArmorItem;
 import heckerpowered.ultimatetech.common.item.tier.UltimateTechArmorMaterials;
@@ -124,6 +125,26 @@ public final class UltimateTechItem {
         public static final RegistryObject<ArmorItem> ITEM_EMERALD_BOOTS = DEFERRED_REGISTER.register(
                         "emerald_boots",
                         () -> new EmeraldArmorItem(UltimateTechArmorMaterials.EMERALD, EquipmentSlot.FEET,
+                                        newProperties()));
+
+        // #endregion
+
+        // #region Copper Items
+        public static final RegistryObject<ArmorItem> ITEM_COPPER_HELMET = DEFERRED_REGISTER.register(
+                        "copper_helmet",
+                        () -> new CopperArmorItem(UltimateTechArmorMaterials.COPPER, EquipmentSlot.HEAD,
+                                        newProperties()));
+        public static final RegistryObject<ArmorItem> ITEM_COPPER_CHESTPLATE = DEFERRED_REGISTER.register(
+                        "copper_chestplate",
+                        () -> new CopperArmorItem(UltimateTechArmorMaterials.COPPER, EquipmentSlot.CHEST,
+                                        newProperties()));
+        public static final RegistryObject<ArmorItem> ITEM_COPPER_LEGGINGS = DEFERRED_REGISTER.register(
+                        "copper_leggings",
+                        () -> new CopperArmorItem(UltimateTechArmorMaterials.COPPER, EquipmentSlot.LEGS,
+                                        newProperties()));
+        public static final RegistryObject<ArmorItem> ITEM_COPPER_BOOTS = DEFERRED_REGISTER.register(
+                        "copper_boots",
+                        () -> new CopperArmorItem(UltimateTechArmorMaterials.COPPER, EquipmentSlot.FEET,
                                         newProperties()));
 
         // #endregion

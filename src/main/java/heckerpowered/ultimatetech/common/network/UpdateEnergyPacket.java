@@ -5,6 +5,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraftforge.network.NetworkEvent.Context;
 
+@Deprecated
 public final class UpdateEnergyPacket implements IUltimateTechPacket {
     private final int id;
     private final int slot;

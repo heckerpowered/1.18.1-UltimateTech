@@ -2,7 +2,6 @@ package heckerpowered.ultimatetech.common.entity.projectile;
 
 import heckerpowered.ultimatetech.common.registries.UltimateTechItem;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.network.protocol.Packet;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -36,9 +35,11 @@ public class SuperArrow extends AbstractArrow {
             this.level.addParticle(ParticleTypes.CRIT, this.getX() + d5 * (double) i / 4.0D,
                     this.getY() + d6 * (double) i / 4.0D, this.getZ() + d1 * (double) i / 4.0D, -d5, -d6 + 0.2D, -d1);
         }
+
         var position = position();
         var forward = getForward().scale(10);
         setPos(position.add(forward));
+
         for (var e : level.getEntities(getOwner(), new AABB(position, position()))) {
             e.invulnerableTime = 0;
             var owner = getOwner();
@@ -48,13 +49,8 @@ public class SuperArrow extends AbstractArrow {
             }
 
             e.hurt(damageSource, (float) getBaseDamage());
+            setBaseDamage(1.0D);
         }
-
-    }
-
-    @Override
-    public Packet<?> getAddEntityPacket() {
-        return super.getAddEntityPacket();
     }
 
     @Override

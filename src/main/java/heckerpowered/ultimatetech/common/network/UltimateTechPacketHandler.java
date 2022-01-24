@@ -35,8 +35,6 @@ public final class UltimateTechPacketHandler {
     }
 
     public static void initialize() {
-        registerServerToClient(UpdatePhasePacket.class, UpdatePhasePacket::decode);
-        registerServerToClient(UpdateEnergyPacket.class, UpdateEnergyPacket::decode);
     }
 
     protected static <MSG extends IUltimateTechPacket> void registerClientToServer(Class<MSG> type,

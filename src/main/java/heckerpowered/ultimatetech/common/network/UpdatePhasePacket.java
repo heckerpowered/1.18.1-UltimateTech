@@ -5,6 +5,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraftforge.network.NetworkEvent.Context;
 
+@Deprecated
 public class UpdatePhasePacket implements IUltimateTechPacket {
     private final boolean isPhase;
 

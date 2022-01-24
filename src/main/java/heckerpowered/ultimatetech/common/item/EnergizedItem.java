@@ -4,14 +4,10 @@ import java.util.List;
 
 import heckerpowered.ultimatetech.common.capabilities.Capabilities;
 import heckerpowered.ultimatetech.common.capabilities.energy.EnergyHandler;
-import heckerpowered.ultimatetech.common.capabilities.energy.IEnergy;
-import heckerpowered.ultimatetech.common.network.UltimateTechPacketHandler;
-import heckerpowered.ultimatetech.common.network.UpdateEnergyPacket;
 import heckerpowered.ultimatetech.common.util.energy.EnergyDisplay;
 import heckerpowered.ultimatetech.common.util.math.ElectricUnit;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -68,11 +64,6 @@ public class EnergizedItem extends Item {
 
     public boolean consumeEnergy(ItemStack stack, double energy) {
         return stack.getCapability(Capabilities.ITEM_ENERGY_CAPABILITY).resolve().get().consumeEnergy(energy);
-    }
-
-    public void updateEnergy(ServerPlayer player, int slot, IEnergy energy) {
-        UltimateTechPacketHandler.sendTo(
-                new UpdateEnergyPacket(player.getId(), slot, energy.getEnergy(), energy.getMaxEnergy()), player);
     }
 
     public void increaseEnergy(ItemStack stack, double energy) {
