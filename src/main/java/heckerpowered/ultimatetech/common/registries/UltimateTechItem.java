@@ -5,6 +5,7 @@ import heckerpowered.ultimatetech.common.UltimateTechGroup;
 import heckerpowered.ultimatetech.common.item.BlinkItem;
 import heckerpowered.ultimatetech.common.item.ElectricBowItem;
 import heckerpowered.ultimatetech.common.item.armor.CoalArmorItem;
+import heckerpowered.ultimatetech.common.item.armor.RedStoneArmorItem;
 import heckerpowered.ultimatetech.common.item.tier.UltimateTechArmorMaterials;
 import heckerpowered.ultimatetech.common.item.tier.UltimateTechTier;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -62,6 +63,37 @@ public final class UltimateTechItem {
                                         newProperties()));
         // #endregion
 
+        // #region Redstone Items
+        public static final RegistryObject<SwordItem> ITEM_REDSTONE_SWORD = DEFERRED_REGISTER.register("redstone_sword",
+                        () -> new SwordItem(UltimateTechTier.REDSTONE, 4, -2.4F, newProperties()));
+        public static final RegistryObject<PickaxeItem> ITEM_REDSTONE_PICKAXE = DEFERRED_REGISTER.register(
+                        "redstone_pickaxe",
+                        () -> new PickaxeItem(UltimateTechTier.REDSTONE, 1, -2.8F, newProperties()));
+        public static final RegistryObject<AxeItem> ITEM_REDSTONE_AXE = DEFERRED_REGISTER.register("redstone_axe",
+                        () -> new AxeItem(UltimateTechTier.REDSTONE, 7.5F, -2.9F, newProperties()));
+        public static final RegistryObject<ShovelItem> ITEM_REDSTONE_SHOVEL = DEFERRED_REGISTER.register(
+                        "redstone_shovel",
+                        () -> new ShovelItem(UltimateTechTier.REDSTONE, 1.5F, -3.0F, newProperties()));
+        public static final RegistryObject<HoeItem> ITEM_REDSTONE_HOE = DEFERRED_REGISTER.register("redstone_hoe",
+                        () -> new HoeItem(UltimateTechTier.REDSTONE, -1, -1.5F, newProperties()));
+        public static final RegistryObject<ArmorItem> ITEM_REDSTONE_HELMET = DEFERRED_REGISTER.register(
+                        "redstone_helmet",
+                        () -> new RedStoneArmorItem(UltimateTechArmorMaterials.REDSTONE, EquipmentSlot.HEAD,
+                                        newProperties()));
+        public static final RegistryObject<ArmorItem> ITEM_REDSTONE_CHESTPLATE = DEFERRED_REGISTER.register(
+                        "redstone_chestplate",
+                        () -> new RedStoneArmorItem(UltimateTechArmorMaterials.REDSTONE, EquipmentSlot.CHEST,
+                                        newProperties()));
+        public static final RegistryObject<ArmorItem> ITEM_REDSTONE_LEGGINGS = DEFERRED_REGISTER.register(
+                        "redstone_leggings",
+                        () -> new RedStoneArmorItem(UltimateTechArmorMaterials.REDSTONE, EquipmentSlot.LEGS,
+                                        newProperties()));
+        public static final RegistryObject<ArmorItem> ITEM_REDSTONE_BOOTS = DEFERRED_REGISTER.register(
+                        "redstone_boots",
+                        () -> new RedStoneArmorItem(UltimateTechArmorMaterials.REDSTONE, EquipmentSlot.FEET,
+                                        newProperties()));
+
+        // #endregion
         public static Properties newProperties() {
                 return new Properties().tab(UltimateTechGroup.getInstance());
         }

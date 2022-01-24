@@ -1,19 +1,16 @@
 {
     "type": "minecraft:crafting_shapeless",
     "pattern": [
-        " C ",
-        " C ",
-        " S "
+        "CCC",
+        "C C",
+        "   "
     ],
     "key": {
         "C": {
             "item": "minecraft:coal"
-        },
-        "S": {
-            "item": "minecraft:stick"
         }
     },
     "result": {
-        "item": "ultimatetech:coal_sword"
+        "item": "ultimatetech:coal_helmet"
     }
 }

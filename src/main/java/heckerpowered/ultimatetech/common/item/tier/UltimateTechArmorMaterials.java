@@ -10,7 +10,9 @@ import net.minecraftforge.common.util.Lazy;
 
 public enum UltimateTechArmorMaterials implements ArmorMaterial {
     COAL("coal", 9, new int[] { 1, 3, 4, 2 }, 10, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-            () -> Ingredient.of(Items.COAL));
+            () -> Ingredient.of(Items.COAL)),
+    REDSTONE("redstone", 13, new int[] { 1, 4, 5, 2 }, 12, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+            () -> Ingredient.of(Items.REDSTONE));
 
     private static final int[] HEALTH_PER_SLOT = new int[] { 13, 15, 16, 11 };
     private final String name;

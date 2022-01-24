@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "pattern": [
+        "CCC",
+        "C C",
+        "C C"
+    ],
+    "key": {
+        "C": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "item": "ultimatetech:redstone_leggings"
+    }
+}

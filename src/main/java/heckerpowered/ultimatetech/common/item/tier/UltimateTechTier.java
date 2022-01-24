@@ -6,7 +6,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.util.Lazy;
 
 public enum UltimateTechTier implements Tier {
-    COAL(1, 95, 5F, 1.5F, 5, () -> Ingredient.of(Items.COAL));
+    COAL(1, 95, 5F, 1.5F, 5, () -> Ingredient.of(Items.COAL)),
+    REDSTONE(2, 561, 6.0F, 3.0F, 15, () -> Ingredient.of(Items.REDSTONE));
 
     private final int level;
     private final int uses;

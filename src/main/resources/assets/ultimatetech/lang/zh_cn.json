@@ -14,5 +14,14 @@
     "item.ultimatetech.coal_helmet": "煤炭头盔",
     "item.ultimatetech.coal_chestplate": "煤炭胸甲",
     "item.ultimatetech.coal_leggings": "煤炭护腿",
-    "item.ultimatetech.coal_boots": "煤炭靴子"
+    "item.ultimatetech.coal_boots": "煤炭靴子",
+    "item.ultimatetech.redstone_sword": "红石剑",
+    "item.ultimatetech.redstone_pickaxe": "红石镐",
+    "item.ultimatetech.redstone_axe": "红石斧",
+    "item.ultimatetech.redstone_shovel": "红石锹",
+    "item.ultimatetech.redstone_hoe": "红石锄",
+    "item.ultimatetech.redstone_helmet": "红石头盔",
+    "item.ultimatetech.redstone_chestplate": "红石胸甲",
+    "item.ultimatetech.redstone_leggings": "红石护腿",
+    "item.ultimatetech.redstone_boots": "红石靴子"
 }

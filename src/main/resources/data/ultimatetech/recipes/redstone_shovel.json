@@ -2,18 +2,18 @@
     "type": "minecraft:crafting_shapeless",
     "pattern": [
         " C ",
-        " C ",
+        " S ",
         " S "
     ],
     "key": {
         "C": {
-            "item": "minecraft:coal"
+            "item": "minecraft:redstone"
         },
         "S": {
             "item": "minecraft:stick"
         }
     },
     "result": {
-        "item": "ultimatetech:coal_sword"
+        "item": "ultimatetech:redstone_shovel"
     }
 }
