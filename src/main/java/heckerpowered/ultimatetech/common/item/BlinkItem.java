@@ -28,8 +28,10 @@ public final class BlinkItem extends EnergizedItem {
         var impulse = player.getDeltaMovement();
         var direction = Vec3.directionFromRotation(0, player.getYRot());
         var forward = direction.scale(1.2);
-        var shouldPhaseWalk = level.getBlockState(new BlockPos(
-                direction.scale(6).add(player.position())).above()).isAir();
+        var blockpos = new BlockPos(
+                direction.scale(6).add(player.position())).above();
+        var block = level.getBlockState(blockpos);
+        var shouldPhaseWalk = block.isAir();
         player.getCapability(Capabilities.PLAYER_INVULNERABLE_CAPABILITY).ifPresent(inv -> {
             player.getCapability(Capabilities.PLAYER_PHASE_CAPABILITY).ifPresent(phase -> {
                 ScheduledUtil.addTask(() -> {

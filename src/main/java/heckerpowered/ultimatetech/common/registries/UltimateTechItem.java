@@ -4,6 +4,7 @@ import heckerpowered.ultimatetech.UltimateTech;
 import heckerpowered.ultimatetech.common.UltimateTechGroup;
 import heckerpowered.ultimatetech.common.item.BlinkItem;
 import heckerpowered.ultimatetech.common.item.ElectricBowItem;
+import heckerpowered.ultimatetech.common.item.ElectrolyticBreathingUnitItem;
 import heckerpowered.ultimatetech.common.item.armor.CoalArmorItem;
 import heckerpowered.ultimatetech.common.item.armor.CopperArmorItem;
 import heckerpowered.ultimatetech.common.item.armor.EmeraldArmorItem;
@@ -36,6 +37,8 @@ public final class UltimateTechItem {
                         "energy_matrix_block",
                         () -> new BlockItem(UltimateTechBlock.ENERGY_MATRIX_BLOCK.get(),
                                         newProperties()));
+        public static final RegistryObject<ElectrolyticBreathingUnitItem> ITEM_ELECTROLYTIC_BREATHING_UNIT = DEFERRED_REGISTER
+                        .register("electrolyic_breathing_unit", ElectrolyticBreathingUnitItem::new);
         // #endregion
 
         // #region Coal Items
